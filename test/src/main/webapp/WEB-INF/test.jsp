@@ -12,6 +12,17 @@
             <% 
             String attribut = (String) request.getAttribute("test");
             out.println( attribut );
+
+            String parametre = request.getParameter( "Author" );
+            out.println( parametre );
+            %>
+        </p>
+        <p>
+            Getting the bean :
+            <%	
+	        com.lounes.bean.Bean ourBean = (com.lounes.bean.Bean) request.getAttribute("TheBean");
+	        out.println( ourBean.getFirstName());
+            out.println( ourBean.getLastName());
             %>
         </p>
 </body>
