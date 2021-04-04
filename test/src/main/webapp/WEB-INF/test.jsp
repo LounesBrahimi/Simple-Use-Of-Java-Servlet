@@ -1,29 +1,20 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-<h2>Simple JSP Page</h2>
+    <head>
+        <meta charset="utf-8" />
+        <title>Test</title>
+    </head>
+    <body>
+        <p>Ceci est une page générée depuis une JSP.</p>
         <p>
-            <% 
-            String attribut = (String) request.getAttribute("test");
-            out.println( attribut );
-
-            String parametre = request.getParameter( "Author" );
-            out.println( parametre );
-            %>
+            ${test}
+            ${param.Author}
         </p>
         <p>
-            Getting the bean :
-            <%	
-	        com.lounes.bean.Bean ourBean = (com.lounes.bean.Bean) request.getAttribute("TheBean");
-	        out.println( ourBean.getFirstName());
-            out.println( ourBean.getLastName());
-            %>
+            Récupération du bean :
+            ${TheBean.firstName}
+            ${TheBean.lastName}
         </p>
-</body>
+    </body>
 </html>
