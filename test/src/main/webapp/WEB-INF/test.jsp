@@ -8,5 +8,11 @@
 </head>
 <body>
 <h2>Simple JSP Page</h2>
+        <p>
+            <% 
+            String attribut = (String) request.getAttribute("test");
+            out.println( attribut );
+            %>
+        </p>
 </body>
 </html>
